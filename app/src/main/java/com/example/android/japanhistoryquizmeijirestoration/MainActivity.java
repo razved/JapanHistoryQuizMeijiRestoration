@@ -80,6 +80,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //show test results
-        Toast.makeText(getApplicationContext(), "Your points: " + point, Toast.LENGTH_SHORT).show();
+        if (point > 0) {
+            Toast.makeText(getApplicationContext(), "Your points: " + point, Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(getApplicationContext(), "You should answer to the questions! " + point, Toast.LENGTH_SHORT).show();
+        }
     }
 }
